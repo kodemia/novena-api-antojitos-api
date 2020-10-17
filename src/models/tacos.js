@@ -17,6 +17,9 @@ const tacoSchema = new mongoose.Schema({
     type: Boolean,
     required: false,
     default: true
+  },
+  expirationDate: {
+    Type: Date // 'YYYY/MM/DD'
   }
 })
 
