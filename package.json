@@ -1,0 +1,19 @@
+{
+  "name": "antojitos-api",
+  "version": "1.0.0",
+  "description": "This is an API with antojitos by kodemia-novena",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "antojitos",
+    "api",
+    "express",
+    "novena",
+    "practica",
+    "integradora"
+  ],
+  "author": "devCharles",
+  "license": "ISC"
+}
