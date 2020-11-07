@@ -3,7 +3,11 @@ const express = require('express')
 
 const tacos = require('../usecases/tacos')
 
+const auth = require('../middlewares/auth')
+
 const router = express.Router()
+
+router.use(auth)
 
 router.get('/', async (request, response) => {
   try {
