@@ -1,15 +1,19 @@
 // Definición del servidor
 
 const express = require('express')
+const cors = require('cors')
 
 const tacosRouter = require('./routes/tacos')
+const authRouter = require('./routes/auth')
 
 const app = express()
+app.use(cors())
 
 app.use(express.json())
 
 // aqui se monta nuestro router
 app.use('/tacos', tacosRouter)
+app.use('/auth', authRouter)
 
 app.get('/', (request, response) => {
   response.json({
