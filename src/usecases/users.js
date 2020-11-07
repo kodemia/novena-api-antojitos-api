@@ -2,6 +2,7 @@
 const Users = require('../models/users')
 
 const bcrypt = require('../lib/bcrypt')
+const jwt = require('../lib/jwt')
 
 // signup
 async function signup (email, password) {
@@ -20,7 +21,7 @@ async function login (email, password) {
   const isValidPassword = bcrypt.compare(password, user.password)
   if (!isValidPassword) throw new Error('Invalid data')
 
-  return isValidPassword
+  return jwt.create({ id: user._id })
 }
 
 function getAll () {

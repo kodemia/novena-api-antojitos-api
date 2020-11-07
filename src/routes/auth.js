@@ -49,13 +49,13 @@ router.post('/login', async (request, response) => {
   try {
     const { email, password } = request.body
 
-    const isOk = await users.login(email, password)
+    const token = await users.login(email, password)
 
     response.json({
       success: true,
       message: 'logged in',
       data: {
-        isOk
+        token
       }
     })
   } catch (error) {
